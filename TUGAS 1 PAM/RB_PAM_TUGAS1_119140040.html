@@ -1,0 +1,103 @@
+<!--
+Nama : Gilang Ashari Abimanyu
+Nim : 119140040
+Kelas :RB 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS 1 PAM - 119140040</title>
+    <style>
+        table,
+        td,
+        th {
+            padding: 20px;
+            border: 1px solid rgb(87, 82, 229);
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="Tabel" style="margin: auto;">
+        <tr bgcolor='#00FFFF'>
+        <b>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Nilai</th>
+        <th>Huruf Mutu</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Bima</td>
+            <td>123</td>
+            <td>60</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Gilang</td>
+            <td>124</td>
+            <td>70</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Fazril</td>
+            <td>125</td>
+            <td>40</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ashari</td>
+            <td>126</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Abimanyu</td>
+            <td>127</td>
+            <td>5</td>
+            <td></td>
+        </tr>
+        </b>
+    </table>
+    <script>
+        let grade = (nilai) => {
+            if (nilai >= 80) {
+                return 'A';
+            } else if (nilai >= 70 && nilai < 80) {
+                return 'AB';
+            } else if (nilai >= 60 && nilai < 70) {
+                return 'B';
+            } else if (nilai >= 50 && nilai < 60) {
+                return 'BC';
+            } else if (nilai >= 40 && nilai < 50) {
+                return 'C';
+            } else if (nilai >= 10 && nilai < 40) {
+                return 'D';
+            } else {
+                return 'E';
+            }
+        }
+        let penilaian = (tabel1, nilai1, gradepenilaian) => {
+            let table = document.getElementById(tabel1);
+            let panjangtabel = table.rows.length;
+            for (i = 1; i < panjangtabel; i++) {
+                var nilai = table.rows[i].cells.item(nilai1).innerHTML;
+                table.rows[i].cells.item(gradepenilaian).innerHTML = grade(nilai);
+            }
+        }
+        penilaian("Tabel", 3, 4);
+    </script>
+</body>
+
+</html>
+
+<!--TUGAS GILANG ASHARI ABIMANYU 119140040 -->
